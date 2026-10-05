@@ -1,0 +1,9 @@
+231438714199.dkr.ecr.ap-southeast-1.amazonaws.com/devops-bootcamp/raznul-ecr:v1   410e27e51d8a        105MB         31.6MB   U    
+231438714199.dkr.ecr.ap-southeast-1.amazonaws.com/devops-bootcamp/raznul:v1       410e27e51d8a        105MB         31.6MB   U    
+NETWORK ID     NAME      DRIVER    SCOPE
+5e60d4e39299   arena     bridge    local
+61afed695c43   bridge    bridge    local
+f4fe7f46fdff   host      host      local
+4097fdf10d73   none      null      local
+DRIVER    VOLUME NAME
+local     me
