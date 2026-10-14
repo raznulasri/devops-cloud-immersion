@@ -75,7 +75,13 @@ sudo apt install lazygit
 ```
 sudo apt install gh
 gh auth login
+```
+
+#### key 8 digit temporary code here github.com/login/device
+```
 gh auth status
+```
+```
 ssh -T git@github.com
 ```
 
