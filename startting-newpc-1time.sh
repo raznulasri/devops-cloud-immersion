@@ -11,7 +11,7 @@ curl -fsSL https://raw.githubusercontent.com/Infratify/bootstrap-devops-bootcamp
 sudo apt update
 
 
-# ZSH
+# ZSH install line by line avoid error
 
 sudo apt install -y zsh fzf
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
