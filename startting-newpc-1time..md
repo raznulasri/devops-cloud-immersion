@@ -30,17 +30,14 @@ alias ls='eza --icons'
 alias ll='ls -la'
 EOF
 
-## 1. Font dahulu — MesloLGS NF install manually
-# https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
+# powerlevel10k install
+## 1. Font dahulu — install at PC MesloLGS NF manully. Please ignore if existing
+ https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
 
 ## 2. Kemudian pasang tema — Oh My Zsh
-# https://github.com/romkatv/powerlevel10k#oh-my-zsh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+// Open ~/.zshrc, find the line that sets ZSH_THEME, and change its value to "powerlevel10k/powerlevel10k".
 
-cat << 'EOF' >> ~/.zshrc
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH="$HOME/.local/bin:$PATH"
-EOF
 
 # lazygit
 sudo apt install lazygit
