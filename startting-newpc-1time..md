@@ -1,25 +1,43 @@
 # new PC
 ## 1 for Windows
+```
 irm https://raw.githubusercontent.com/Infratify/bootstrap-devops-bootcamp/main/install.ps1 | iex
+```
 
 ## 1 for Linux
+```
 curl -fsSL https://raw.githubusercontent.com/Infratify/bootstrap-devops-bootcamp/main/script-linux.sh -o script-linux.sh && bash script-linux.sh
+```
 
 ----------------
 
 # Inside Linux
 ## 2 starting setup
+```
 sudo apt update
+```
 
 
 ## 3 ZSH install line by line avoid error
+```
 sudo apt install -y zsh fzf
+ ```
+```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+```
+```
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+```
+```
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+```
+```
 sed -i 's/^plugins=.*/plugins=(git sudo zsh-autosuggestions fzf zsh-syntax-highlighting)/' ~/.zshrc
+```
+```
 chsh -s $(which zsh)
-## close terminal and open
+```
+### close terminal and open
 
 
 ## 4 install eza
