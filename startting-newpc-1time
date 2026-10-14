@@ -42,6 +42,8 @@ cat << 'EOF' >> ~/.zshrc
 export PATH="$HOME/.local/bin:$PATH"
 EOF
 
+# lazygit
+sudo apt install lazygit
 
 # github
 sudo apt install gh
