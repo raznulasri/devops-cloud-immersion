@@ -72,10 +72,12 @@ sudo apt install lazygit
 ```
 
 ## 7 github
+```
 sudo apt install gh
 gh auth login
 gh auth status
 ssh -T git@github.com
+```
 
 ## 8 aws
 ```
