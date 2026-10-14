@@ -6,11 +6,22 @@ irm https://raw.githubusercontent.com/Infratify/bootstrap-devops-bootcamp/main/i
 curl -fsSL https://raw.githubusercontent.com/Infratify/bootstrap-devops-bootcamp/main/script-linux.sh -o script-linux.sh && bash script-linux.sh
 
 
-
-
 ## Inside Linux
 # starting setup
 sudo apt update
+
+
+# ZSH
+
+sudo apt install -y zsh fzf
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+sed -i 's/^plugins=.*/plugins=(git sudo zsh-autosuggestions fzf zsh-syntax-highlighting)/' ~/.zshrc
+chsh -s $(which zsh)
+
+# Ubuntu 24.04 LTS / WSL
+sudo apt update && sudo apt install -y eza
 
 # github
 sudo apt install gh
