@@ -42,8 +42,7 @@ chsh -s $(which zsh)
 
 ## 4 install eza
 ```
-sudo apt update && sudo apt install -y eza
-
+sudo apt install -y eza
 
 cat << 'EOF' >> ~/.zshrc
 # Custom eza aliases
