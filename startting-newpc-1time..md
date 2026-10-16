@@ -14,6 +14,9 @@ curl -fsSL https://raw.githubusercontent.com/Infratify/bootstrap-devops-bootcamp
 # Inside Linux
 ## 2 starting setup
 ```
+ssh-keygen -t ed25519 -C "raznulasri-pc"
+```
+```
 sudo apt update
 ```
 
