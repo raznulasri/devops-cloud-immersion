@@ -411,3 +411,13 @@ Compose + k8s
 
 ```
 ---
+
+
+## 🔄 CI/CD 1 ⚡
+GitHub Actions
+
+```bash
+.git/workflows/deploy.yaml
+
+```
+---
