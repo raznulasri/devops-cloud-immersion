@@ -44,5 +44,3 @@ jobs:
 permissions:
   packages: write
   contents: read
-
-  #
