@@ -1,0 +1,43 @@
+# workflow
+name: deploy
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+defaults:
+      run:
+        working-directory: launchpad
+
+# job
+jobs:
+  test:
+    if: github.event.pull_request.merged == false   # tambah
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+      - run: npm clean-install
+      - run: npm run test
+      - run: bash scripts/report.sh
+        env:
+          BOARD_URL: ${{ vars.BOARD_URL }}
+          SHIPIT_TOKEN: ${{ secrets.SHIPIT_TOKEN }}
+
+  deploy:
+    needs: test
+    if: always() && github.event.pull_request.merged == true   # tambah
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+      - run: npm clean-install
+      - run: npm run build
+        env:
+          VITE_BOARD_URL: ${{ vars.BOARD_URL }}
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: launchpad/dist
+      - uses: actions/deploy-pages@v5
+        
+# laman Pages
+https://raznulasri.github.io/devops-bootcamp-shipit/
