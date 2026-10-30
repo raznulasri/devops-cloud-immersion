@@ -1,4 +1,4 @@
- # GHCR
+# GHCR
 ghcr.io/raznulasri/ship-dashboard:latest
 
 # self-hosted runner
