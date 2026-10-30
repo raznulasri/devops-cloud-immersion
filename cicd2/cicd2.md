@@ -11,7 +11,6 @@ npm run test
 echo $?
 
 
-
 # branch protection
 Settings → Branches → Add branch protection rule
 
